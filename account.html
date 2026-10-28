@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Your private SAFARIYA travel space for trip requests and planning.">
+  <title>Your travel space | SAFARIYA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/account.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to your account</a>
+  <header class="site-header account-header"><nav class="nav wrap" aria-label="Account navigation">
+    <a class="brand-logo" href="index.html"><img src="public/images/safaria-logo.png" alt="Safariya Adventure"></a>
+    <div class="account-nav"><a href="plan%20your%20journey.html">Plan your journey</a><button id="sign-out" class="text-button" type="button">Sign out</button></div>
+  </nav></header>
+  <main id="main" class="dashboard wrap">
+    <p id="account-status" class="form-message" role="status" aria-live="polite"></p>
+    <section class="dashboard-welcome" aria-labelledby="account-title">
+      <p class="eyebrow">YOUR SAFARIYA TRAVEL SPACE</p>
+      <h1 id="account-title">Karibu, <em id="customer-name">traveller</em>.</h1>
+      <p id="customer-email"></p>
+      <p>Your requests and trip notes, gathered in one place. Our team confirms every itinerary and booking with you.</p>
+      <button id="edit-profile" class="text-button" type="button" aria-expanded="false" aria-controls="profile-form">Update profile name</button>
+      <form id="profile-form" class="profile-form" hidden>
+        <label for="profile-name">Full name</label><input id="profile-name" name="full_name" minlength="2" maxlength="120" autocomplete="name" required>
+        <button class="button button-light" type="submit">Save profile</button>
+        <p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="dashboard-section" aria-labelledby="upcoming-title">
+      <div class="dashboard-heading"><div><p class="eyebrow">YOUR PLANS</p><h2 id="upcoming-title">Upcoming <em>journeys.</em></h2></div><a class="under-link" href="plan%20your%20journey.html">Plan another trip <span aria-hidden="true">↗</span></a></div>
+      <div id="upcoming-bookings" class="booking-list"><p class="empty-state">Loading your requests…</p></div>
+    </section>
+    <section class="dashboard-section previous-section" aria-labelledby="previous-title">
+      <p class="eyebrow">MEMORIES MADE</p><h2 id="previous-title">Previous <em>journeys.</em></h2>
+      <div id="previous-bookings" class="booking-list"><p class="empty-state">Loading your trips…</p></div>
+    </section>
+    <section class="dashboard-section hotel-section" aria-labelledby="hotel-title">
+      <p class="eyebrow">STAYS &amp; LODGES</p><h2 id="hotel-title">Hotel <em>reservations.</em></h2>
+      <p class="account-note">Hotel reservation details are not connected to this site yet. Your SAFARIYA planner will share confirmed stay information directly.</p>
+    </section>
+    <section class="dashboard-section" aria-labelledby="journeys-title">
+      <div class="dashboard-heading"><div><p class="eyebrow">A PLACE TO BEGIN</p><h2 id="journeys-title">Explore a <em>journey.</em></h2></div></div>
+      <div id="package-list" class="package-grid"></div>
+    </section>
+    <p class="setup-note" id="setup-note" hidden>Account services are not connected. Follow the <a href="README.md">Supabase setup guide</a>.</p>
+  </main>
+  <footer class="footer"><div class="wrap footer-bottom"><span>© 2026 SAFARIYA. All rights reserved.</span><a href="mailto:hello@safariya.travel">Email our Arusha team</a></div></footer>
+</body>
+</html>

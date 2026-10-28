@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- Page: auth -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="Sign in to SAFARIYA Adventure to explore safari packages, booking requests and your travel plans.">
+  <title>Sign in | SAFARIYA Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/account.js"></script>
+</head>
+<body class="login-page">
+  <a class="skip-link" href="#main">Skip to sign in</a>
+  <!-- Main page content -->
+<main id="main" class="login-layout">
+    <section class="login-art" aria-label="Tanzanian safari landscape">
+      <a class="login-brand brand-logo" href="index.html"><img src="public/images/safaria-logo.png" alt="Safariya Adventure"></a>
+      <div class="login-art-copy">
+        <p class="eyebrow light">YOUR NEXT STORY STARTS HERE</p>
+        <h1>Return to<br>the <em>wild.</em></h1>
+        <p>Pick up where your journey paused. Your Tanzania, thoughtfully planned and always your own.</p>
+      </div>
+      <div class="login-photo-caption"><span>Northern Tanzania</span><span>2°20′S&nbsp; 34°50′E</span></div>
+    </section>
+    <section class="login-panel" aria-labelledby="auth-title">
+      <div class="login-topline"><a class="login-back" href="index.html"><span aria-hidden="true">←</span> Back to SAFARIYA</a><span class="login-top-note">A more personal journey</span></div>
+      <div class="login-card">
+        <div class="login-card-mark" aria-hidden="true"><span class="brand-mark"></span></div>
+        <p class="eyebrow">YOUR PRIVATE TRAVEL SPACE</p>
+        <h2 id="auth-title">Welcome <em>back.</em></h2>
+        <p class="login-intro">Create an account for your first visit, or sign in to return to your travel plans.</p>
+        <div class="auth-tabs login-mode-tabs" role="tablist" aria-label="Choose an account option">
+          <button id="show-login" type="button" role="tab" aria-selected="true" aria-controls="auth-form">Returning customer</button>
+          <button id="show-register" type="button" role="tab" aria-selected="false" aria-controls="signup-form">First time here?</button>
+        </div>
+        <form id="auth-form" role="tabpanel" aria-labelledby="show-login" novalidate>
+          <label class="login-field">Email address<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">✉</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></label>
+          <div class="login-password-heading"><label class="login-field" for="login-password">Password</label><button class="login-forgot" id="forgot-password" type="button">Forgot password?</button></div>
+          <div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">◇</span><input id="login-password" name="password" type="password" autocomplete="current-password" minlength="8" placeholder="Enter your password" required><button class="password-visibility" id="password-visibility" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+          <div class="login-options"><label class="remember-option"><input id="remember-me" type="checkbox"><span class="remember-check" aria-hidden="true"></span><span>Remember me</span></label><span class="login-secure"><span aria-hidden="true">⌑</span> Secure sign in</span></div>
+          <button class="login-submit" type="submit"><span>Sign in to your account</span><span aria-hidden="true">↗</span></button>
+          <p class="login-message form-message" role="status" aria-live="polite"></p>
+        </form>
+        <form id="signup-form" role="tabpanel" aria-labelledby="show-register" hidden novalidate>
+          <label class="login-field">Full name<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">✧</span><input name="full_name" autocomplete="name" minlength="2" placeholder="Your name" required></div></label>
+          <label class="login-field">Email address<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">✉</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></label>
+          <label class="login-field">Create password<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">◇</span><input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="10" placeholder="At least 10 characters" required><button class="password-visibility" type="button" data-toggle-password="signup-password" aria-label="Show password" aria-pressed="false">Show</button></div></label>
+          <label class="login-field">Confirm password<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">◇</span><input id="signup-confirm-password" name="confirm_password" type="password" autocomplete="new-password" minlength="10" placeholder="Enter your password again" required><button class="password-visibility" type="button" data-toggle-password="signup-confirm-password" aria-label="Show password" aria-pressed="false">Show</button></div></label>
+          <label class="auth-consent"><input name="terms" type="checkbox" required><span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Notice</a>.</span></label>
+          <button class="login-submit" type="submit"><span>Create your account</span><span aria-hidden="true">↗</span></button>
+          <p class="login-message form-message" role="status" aria-live="polite"></p>
+          <button class="text-button resend-verification" type="button" hidden>Resend verification email</button>
+        </form>
+        <div class="login-divider"><span>OR CONTINUE WITH</span></div>
+        <div class="social-auth"><button class="google-signin" id="google-signin" type="button"><span class="google-g" aria-hidden="true">G</span> Continue with Google</button><button class="google-signin apple-signin" id="apple-signin" type="button">Continue with Apple</button></div>
+        <p class="google-note" id="google-note" hidden>Social sign-in needs provider credentials in Supabase before use.</p>
+        <div class="login-create"><span>New to SAFARIYA?</span> <button class="create-account-link" id="create-account" type="button">Create an account <span aria-hidden="true">↗</span></button></div>
+        <form id="reset-form" class="login-reset-form" hidden>
+          <p>Enter your email and we’ll send a secure password reset link.</p>
+          <label class="login-field">Email address<div class="login-input-wrap"><span class="login-input-icon" aria-hidden="true">✉</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div></label>
+          <button class="login-submit" type="submit"><span>Send reset link</span><span aria-hidden="true">↗</span></button>
+          <p class="login-message form-message" role="status" aria-live="polite"></p>
+          <button class="text-button reset-back" id="reset-back" type="button">Return to sign in</button>
+        </form>
+        <p class="setup-note login-setup-note" id="setup-note" hidden>Account access needs configuration. Follow the Supabase setup in <a href="README.md">project documentation</a>.</p>
+      </div>
+      <!-- Shared site footer -->
+<footer class="login-footer"><span>© 2026 SAFARIYA Adventure</span><span class="footer-dot">•</span><a href="mailto:hello@safariya.travel">Need help?</a></footer>
+    </section>
+  </main>
+</body>
+</html>

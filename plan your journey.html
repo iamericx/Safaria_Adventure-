@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <meta
+      name="description"
+      content="Start planning a thoughtful Tanzania safari, mountain or island journey with SAFARIYA."
+    />
+    <title>Start Your Journey | SAFARIYA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script type="module" src="js/journey-form.js"></script>
+  </head>
+  <body class="journey-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand-logo" href="index.html"
+          ><img src="public/images/safaria-logo.png" alt="Safariya Adventure"
+        /></a>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="destinations.html">Destinations</a
+          ><a href="experiences.html">Experiences</a
+          ><a href="journeys.html">Journeys</a><a href="about.html">About</a
+          ><a href="journal.html">Journal</a>
+          <a
+            class="nav-cta"
+            href="plan%20your%20journey.html"
+            aria-current="page"
+            >Plan your journey <span aria-hidden="true"></span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="journey-main">
+      <section class="journey-intro wrap">
+        <p class="eyebrow">PLAN YOUR ADVENTURE</p>
+        <h1>Start Your <em>Journey</em></h1>
+        <p>
+          Tell us what you’re dreaming of. We’ll start shaping a thoughtful
+          journey through Tanzania, at your pace.
+        </p>
+      </section>
+
+      <section class="journey-booking wrap" aria-label="Trip enquiry">
+        <div class="journey-form-panel">
+          <div class="journey-form-heading">
+            <span>01 / A NOTE TO OUR TEAM</span>
+            <p>Share a few details to begin.</p>
+          </div>
+          <form id="journey-request" class="journey-form" novalidate>
+            <label
+              >Full name <span aria-hidden="true">*</span
+              ><input
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="120"
+                placeholder="Your name"
+            /></label>
+            <label
+              >Email address <span aria-hidden="true">*</span
+              ><input
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="254"
+                placeholder="you@example.com"
+            /></label>
+            <label
+              >Phone number <span aria-hidden="true">*</span
+              ><input
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+                maxlength="40"
+                pattern="[+]?[0-9][0-9 ()-]{6,38}"
+                placeholder="+255 7XX XXX XXX"
+                aria-describedby="phone-help"
+              /><small id="phone-help"
+                >Include your country code, for example +255.</small
+              ></label
+            >
+            <label
+              >Preferred travel date <span aria-hidden="true">*</span
+              ><input name="date" type="date" required
+            /></label>
+            <label
+              >Destination or experience <span aria-hidden="true">*</span
+              ><select name="destination" required>
+                <option value="" selected disabled>
+                  Choose a place or experience
+                </option>
+                <option value="Serengeti">Serengeti</option>
+                <option value="Ngorongoro">Ngorongoro</option>
+                <option value="Tarangire">Tarangire</option>
+                <option value="Kilimanjaro">Kilimanjaro</option>
+                <option value="Zanzibar">Zanzibar</option>
+                <option value="Wildlife safari">Wildlife safari</option>
+                <option value="A journey across Tanzania">
+                  A journey across Tanzania
+                </option>
+              </select></label
+            >
+            <label
+              >Number of guests <span aria-hidden="true">*</span
+              ><select name="guests" required>
+                <option value="" selected disabled>Select guests</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option value="7+">7 or more</option>
+              </select></label
+            >
+            <label class="journey-field-full"
+              >Notes or special requests<textarea
+                name="notes"
+                rows="4"
+                maxlength="2000"
+                placeholder="What would make this journey yours?"
+              ></textarea>
+            </label>
+            <button class="journey-submit journey-field-full" type="submit">
+              Send Request <span aria-hidden="true"></span>
+            </button>
+            <p
+              class="journey-form-status journey-field-full"
+              id="journey-form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+          <p class="journey-form-note">
+            This enquiry form is a preview. It won’t send your details until a
+            booking service is connected.
+          </p>
+        </div>
+        <figure class="journey-feature">
+          <img src="big%205.jpg" alt="Wildlife on the Tanzanian savannah" />
+          <figcaption>
+            <span>THE NORTHERN CIRCUIT</span
+            ><strong>Let the land<br />set the pace.</strong
+            ><a href="destinations/serengeti.html"
+              >Explore the Serengeti <span aria-hidden="true">↗</span></a
+            >
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="journey-contact wrap" aria-label="Contact SAFARIYA">
+        <article>
+          <span class="journey-contact-icon" aria-hidden="true">↗</span>
+          <p class="eyebrow">CALL OR WHATSAPP</p>
+          <a href="tel:+255762000000">+255 762 000 000</a>
+        </article>
+        <article>
+          <span class="journey-contact-icon" aria-hidden="true">◷</span>
+          <p class="eyebrow">OPERATING HOURS</p>
+          <p>Contact us by email to arrange a time.</p>
+        </article>
+        <article>
+          <span class="journey-contact-icon" aria-hidden="true">✉</span>
+          <p class="eyebrow">WRITE TO US</p>
+          <a href="mailto:hello@safariya.travel">hello@safariya.travel</a>
+        </article>
+      </section>
+
+      <section
+        class="journey-discover"
+        aria-labelledby="journey-discover-title"
+      >
+        <div class="journey-discover-copy">
+          <p class="eyebrow">A COUNTRY OF MANY WORLDS</p>
+          <h2 id="journey-discover-title">Find Your Next <em>Adventure</em></h2>
+          <p>
+            From the open plains to the Indian Ocean, follow the places that
+            stay with you.
+          </p>
+          <a class="journey-discover-link" href="destinations.html"
+            >Explore Tanzania <span aria-hidden="true"></span></a
+          >
+        </div>
+        <div class="journey-discover-images">
+          <a
+            class="journey-discover-image journey-discover-island"
+            href="destinations/zanzibar.html"
+            ><img
+              src="zanzibar.jfif"
+              alt="The turquoise coast of Zanzibar"
+              loading="lazy"
+            /><span>Zanzibar <b aria-hidden="true">↗</b></span></a
+          >
+          <a
+            class="journey-discover-image journey-discover-mountain"
+            href="destinations/kilimanjaro.html"
+            ><img
+              src="kilimanjaro.jfif"
+              alt="Mount Kilimanjaro above the plains"
+              loading="lazy"
+            /><span>Kilimanjaro <b aria-hidden="true">↗</b></span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="brand-logo" href="index.html"
+              ><img
+                src="public/images/safaria-logo.png"
+                alt="Safariya Adventure"
+            /></a>
+            <p>Premium Tanzanian travel<br />&amp; experiences.</p>
+            <span class="footer-karibu">Karibu Tanzania <i>— Welcome</i></span>
+          </div>
+          <div class="footer-col">
+            <p class="eyebrow">EXPLORE</p>
+            <a href="destinations.html">Destinations</a
+            ><a href="experiences.html">Experiences</a
+            ><a href="journeys.html">Journeys</a>
+          </div>
+          <div class="footer-col">
+            <p class="eyebrow">OUR WORLD</p>
+            <a href="about.html">About SAFARIYA</a
+            ><a href="journal.html">Journal</a
+            ><a href="mailto:hello@safariya.travel">Get in touch</a>
+          </div>
+          <div class="footer-col footer-contact">
+            <p class="eyebrow">SAY JAMBO</p>
+            <a href="mailto:hello@safariya.travel">hello@safariya.travel</a
+            ><a href="tel:+255762000000">+255 762 000 000</a
+            ><span>Arusha, Tanzania</span>
+          </div>
+          <form class="newsletter" novalidate>
+            <label class="eyebrow" for="newsletter-email"
+              >NOTES FROM TANZANIA</label
+            >
+            <p>Occasional inspiration, delivered thoughtfully.</p>
+            <div class="newsletter-input">
+              <input
+                id="newsletter-email"
+                type="email"
+                placeholder="Your email address"
+                required
+              /><button aria-label="Subscribe">↗</button>
+            </div>
+            <small class="form-message" aria-live="polite"></small>
+          </form>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 SAFARIYA. All rights reserved.</span
+          ><span>Made with care in Tanzania</span
+          ><a href="#top" class="back-top">BACK TO TOP ↑</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
